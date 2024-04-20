@@ -3,7 +3,12 @@ import os
 
 def rock_paper_scissors(winner):
     winner = 0
-    user_input = input("Rock, Paper, or Scissors? ").lower()
+    while True:
+        user_input = input("Rock, Paper, or Scissors? ").lower()
+        if user_input in ["rock", "paper", "scissors"]:
+            break
+        else:
+            print("Invalid input. Please enter rock, paper, or scissors.")
     choices = ["rock", "paper", "scissors"]
     computer = random.choice(choices)
     if user_input == computer:
